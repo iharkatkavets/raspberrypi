@@ -2,7 +2,8 @@
 
 Add next line to `config.txt`
 ```bash
-dtoverlay=dwc2
+[cm5]
+dtoverlay=dwc2,dr_mode=host
 ```
 Modify file `cmdline.txt`. Add the next str before `quiet`
 ```bash
