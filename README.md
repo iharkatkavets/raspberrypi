@@ -1,4 +1,4 @@
-## Some usefule steps for raspb configuration
+## Some useful steps for raspb setup
 
 Enlarge swap size by modifying file `/etc/dphys-swapfile`
 ```bash
