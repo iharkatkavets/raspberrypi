@@ -4,7 +4,6 @@
 sudo apt install ninja-build gettext cmake unzip curl
 git clone https://github.com/neovim/neovim
 cd neovim && git checkout stable
-cd neovim
 nohup make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" > output.log 2>&1 &
 sudo make install
 ```
