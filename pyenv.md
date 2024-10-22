@@ -1,4 +1,4 @@
-The dependencies required for installing `pyenv` from scratch
+The dependencies required for installing `pyenv` from sources
 
 ```bash
 sudo apt install -y \
