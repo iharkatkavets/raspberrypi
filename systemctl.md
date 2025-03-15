@@ -21,3 +21,8 @@ RuntimeDirectory=HERE
 [Install]
 WantedBy=multi-user.target
 ```
+After updating the file need to execute
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart sps30-measurement.service
+```
