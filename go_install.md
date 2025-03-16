@@ -8,3 +8,8 @@ export PATH=$PATH:/usr/local/go/bin
 ```
 
 More Info [here](https://go.dev/doc/install)
+
+Compile the project
+```
+CGO_ENABLED=1 GOOS=linux GOARCH=arm64 CC=aarch64-linux-gnu-gcc go build -o dist/bin ./project/
+```
