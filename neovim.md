@@ -8,4 +8,4 @@ nohup make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=/usr/local" > output.log 2>
 sudo make install
 ```
 
-More info at [source](https://forums.raspberrypi.com/viewtopic.php?t=367119)
+More info at [source](https://github.com/neovim/neovim/blob/master/BUILD.md)
