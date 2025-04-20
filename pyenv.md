@@ -11,3 +11,8 @@ sudo apt install -y \
     zlib1g-dev \
     libssl-dev
 ```
+Clone the sources and compile
+```bash
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+cd ~/.pyenv && src/configure && make -C src
+```
