@@ -22,3 +22,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
 ```
+Select version and install
+```bash
+pyenv install -l
+pyenv install 3.13.3
+```
