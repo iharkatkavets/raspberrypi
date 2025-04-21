@@ -15,6 +15,14 @@ sudo apt install -y \
     libatk-bridge2.0-0 libnss3 libx11-xcb1 \
     gstreamer1.0-plugins-bad
 ```
+Create python venv
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+```
+Install playwright via pip
+```bash
+pip install playwright
+```
 # Install playwright tools
 ```bash
 playwright install
