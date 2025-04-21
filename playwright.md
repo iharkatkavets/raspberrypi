@@ -15,3 +15,7 @@ sudo apt install -y \
     libatk-bridge2.0-0 libnss3 libx11-xcb1 \
     gstreamer1.0-plugins-bad
 ```
+# Install playwright tools
+```bash
+playwright install
+```
