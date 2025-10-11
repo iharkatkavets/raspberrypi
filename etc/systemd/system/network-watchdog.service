@@ -1,0 +1,22 @@
+[Unit]
+Description=Run network watchdog every 10 minutes
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+Environment=ROUTER=192.168.0.1
+Environment=ATTEMPTS=2
+Environment=DELAY_SEC=600
+ExecStart=/bin/bash -lc '\
+          success=0; \
+          /usr/bin/logger -t network-watchdog "Network watchdog started"; \
+          for ((i=1; i<=ATTEMPTS; i++)); do \
+          if /bin/ping -c1 -W3 "$ROUTER" >/dev/null 2>&1; then success=1; break; fi; \
+          /usr/bin/logger -t network-watchdog "Attempt $i/$ATTEMPTS: router $ROUTER unreachable — retrying in $DELAY_SEC s"; \
+          sleep "$DELAY_SEC"; \
+          done; \
+          if [ "$success" -eq 0 ]; then \
+          /usr/bin/logger -t network-watchdog "Network unreachable after $ATTEMPTS attempts. Would reboot now"; \
+          /sbin/reboot; \
+          fi'
