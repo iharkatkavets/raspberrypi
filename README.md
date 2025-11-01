@@ -12,3 +12,12 @@ Disable Protected Management Frames by adding the line to file `/etc/NetworkMana
 [connection]
 wifi-sec.pmf=disable
 ```
+
+Get WiFi power save configuration
+```bash
+iw dev wlan0 get power_save
+```
+Disable WiFi power save configuration
+```bash
+sudo iw dev wlan0 set power_save off
+```
