@@ -6,13 +6,13 @@ Add next line to `config.txt` file
 dtoverlay=dwc2,dr_mode=peripheral
 ```
 
-Add the next str to the end of line of the file `cmdline.txt`
+Append the line in the file `cmdline.txt`
 ```
-modules-load=dwc2,g_cdc g_cdc.dev_addr=12:22:33:44:55:66 g_cdc.host_addr=16:22:33:44:55:66
+modules-load=dwc2,g_serial
 ```
 More info is [here](https://github.com/thagrol/Guides/blob/main/ethernetgadget.pdf)
 
-### Not sure if the next steps are required to be performed on RaspberryPi Zero W:
+Ensure that the service does work on RPI
 ```bash
 sudo systemctl enable serial-getty@ttyGS0.service
 sudo systemctl start serial-getty@ttyGS0.service
