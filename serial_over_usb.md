@@ -1,6 +1,6 @@
 ## Setup serial connection over USB
 
-Add next line to `config.txt` file 
+Add next line to `/boot/firmware/config.txt` file 
 ```
 [all]
 dtoverlay=dwc2,dr_mode=peripheral
