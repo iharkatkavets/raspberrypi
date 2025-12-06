@@ -6,7 +6,7 @@ Add next line to `/boot/firmware/config.txt` file
 dtoverlay=dwc2,dr_mode=peripheral
 ```
 
-Append the line in the file `modules-load=dwc2,g_serial`
+Append the line in the file `/boot/firmware/cmdline.txt`
 ```
 modules-load=dwc2,g_serial
 ```
