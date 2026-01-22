@@ -34,3 +34,38 @@ wins support = yes
 local master = yes
 preferred master = yes
 ```
+
+iOS `Files` compatible config (upload operations do work)
+```
+[global]
+   wins support = yes
+   local master = yes
+   preferred master = yes
+
+   server min protocol = SMB2
+   server max protocol = SMB3
+   unix extensions = no
+
+   ea support = yes
+   vfs objects = fruit streams_xattr
+   fruit:metadata = stream
+   fruit:posix_rename = yes
+   fruit:zero_file_id = yes
+
+[GuestShare]
+   path = /share/<DIR>
+   browseable = yes
+   read only = no
+   guest ok = yes
+   public = yes
+   force user = <SMBUSER>
+   force group = <SMBGROUP>
+   create mask = 0664
+   directory mask = 0775
+   oplocks = no
+   level2 oplocks = no
+   kernel oplocks = no
+   aio read size = 1
+   aio write size = 1
+
+```
