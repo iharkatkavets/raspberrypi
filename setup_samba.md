@@ -10,7 +10,7 @@ Create a user with home folder
 useradd -m -s /usr/sbin/nologin -g <GROUPNAME> <USERNAME>
 ```
 
-Add next line to config `/etc/samba/sbmd.conf`
+Add next line to config `/etc/samba/smd.conf`
 ```
 include = /etc/samba/shares.conf
 ```
